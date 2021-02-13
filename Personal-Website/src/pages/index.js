@@ -9,18 +9,23 @@ import {
 } from 'react-accessible-accordion'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Image from "../components/image"
-
+import { FaGithubSquare } from "@react-icons/all-files/fa/FaGithubSquare";
+import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
+import { GoMail } from "@react-icons/all-files/go/GoMail"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <h1>Hi, I'm Kyle Zhang. </h1>
     <ul style={{listStyle: 'none', marginBottom: '60px', float: 'right'}}>
-    <div style ={{maxWidth: '300px', marginBottom: '1.45rem'}}>
+    <div id = "Links" style ={{maxWidth: '300px', marginBottom: '1.45rem'}}>
       <a href="https://github.com/kylzhng" target = "_blank" rel = "noopener noreferrer" style = {{textDecoration: 'none',}}>
-        <Image></Image>
+      <FaGithubSquare size="3em" color="black"/>
       </a>
+      <a href="https://www.linkedin.com/in/kyle-zhang-535ba3154/" target = "_blank" rel = "noopener noreferrer" style = {{textDecoration: 'none',}}>
+      <FaLinkedin size="3em" color= "black"/>
+      </a>
+      <GoMail size="3em" color="black"/>
     </div>
     </ul>
     <h2> Here's a little bit about me,</h2>
