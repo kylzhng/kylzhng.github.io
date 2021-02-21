@@ -684,3 +684,9 @@ pre tt:after {
     opacity: 1;
   }
 }
+.socialIcons {
+  color: black;
+}
+.socialIcons:hover {
+  color: red;
+}

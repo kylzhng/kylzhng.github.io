@@ -35,17 +35,7 @@ const Header = ({ siteTitle }) => (
               Home
             </p>
           </ListLink>
-          <ListLink to="/contact/">
-            <p style={{
-              color: `white`,
-              textDecoration: `underline`,
-              textDecorationThickness: 4,
-              float: 'right',
-              fontSize: 16,
-            }}>
-              Contact
-            </p>
-          </ListLink>
+      
         </ul>
         
         

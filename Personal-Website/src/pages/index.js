@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import {
   Accordion,
@@ -12,20 +12,40 @@ import SEO from "../components/seo"
 import { FaGithubSquare } from "@react-icons/all-files/fa/FaGithubSquare";
 import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
 import { GoMail } from "@react-icons/all-files/go/GoMail"
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
-const IndexPage = () => (
+const IndexPage = () => {
+  const [showMsg, setShowMsg] = useState(false)
+  const showCopied = () => {
+    setShowMsg(!showMsg) 
+  }
+  return(
   <Layout>
     <SEO title="Home" />
     <h1>Hi, I'm Kyle Zhang. </h1>
     <ul style={{listStyle: 'none', marginBottom: '60px', float: 'right'}}>
     <div id = "Links" style ={{maxWidth: '300px', marginBottom: '1.45rem'}}>
       <a href="https://github.com/kylzhng" target = "_blank" rel = "noopener noreferrer" style = {{textDecoration: 'none',}}>
-      <FaGithubSquare size="3em" color="black"/>
+      <FaGithubSquare class="socialIcons" size="3em"/>
       </a>
       <a href="https://www.linkedin.com/in/kyle-zhang-535ba3154/" target = "_blank" rel = "noopener noreferrer" style = {{textDecoration: 'none',}}>
-      <FaLinkedin size="3em" color= "black"/>
+      <FaLinkedin size="3em" class="socialIcons"/>
       </a>
-      <GoMail size="3em" color="black"/>
+      
+      <CopyToClipboard text={"kz199@rutgers.edu"}
+          onCopy={showCopied}>
+          <GoMail size="3em" class="socialIcons"/> 
+      </CopyToClipboard>
+      <p style={{
+            display: showMsg ? 'block' : 'none',
+            textAlign: "right",
+            fontSize: "14px",
+            fontStyle: "italic",
+            fontWeight: "bold",
+            color: "red",
+            marginTop: "50px"
+          }}>Email Copied.</p>
+      
     </div>
     </ul>
     <h2> Here's a little bit about me,</h2>
@@ -93,7 +113,7 @@ const IndexPage = () => (
         
       </div>
       <div id = "Project 2" style={{marginBottom: '1.5em'}}>
-        <Link to="/page-2/" style = {{textDecoration: 'none'}}>
+        <Link to="/SandwichStore/" style = {{textDecoration: 'none'}}>
           <div class="outer__button button__left-right">
             
               <h4 style = {{
@@ -151,40 +171,13 @@ const IndexPage = () => (
         </Link>
       </div>
 
-      <div id = "Project 4" style={{marginBottom: '1.5em'}}>
-        <Link to="/LSE/" style = {{textDecoration: 'none'}}>
-          <div class="outer__button button__left-right">
-            
-              <h4 style = {{
-              margin: `0 auto`,
-              maxWidth: 960,
-              lineHeight: 2,
-              textDecoration: 'underline',
-              textDecorationThickness: 3,
-              textDecorationColor: 'red',
-              
-              }}>
-              Little Search Engine</h4>  
-
-              <p style = {{
-              margin: `0 auto`,
-              maxWidth: 960,
-              fontSize: 12,
-              lineHeight: 1.25,
-              fontFamily: 'Verdana',
-              
-              }}>
-                Takes in the name of a text file containing the names of two documents with text as well as a file containing “noise words” that are present multiple times that should be ignored as input and creates a hash table of all of the words in the text file, from which words can be searched for and obtained, differentiating which document that the word came from.
-              </p>
-              
-          </div>
-        </Link>
-      </div>
+    
     </div>
 
     
     
   </Layout>
-)
+  )
+}
 
 export default IndexPage
