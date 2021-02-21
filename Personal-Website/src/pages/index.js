@@ -84,7 +84,7 @@ const IndexPage = () => {
     <div id = "Projects" >
       <h2 style={{textDecoration: 'underline', textDecorationColor: 'red', marginBottom: '60px'}}>Projects</h2>
       <div id = "Project 1">
-        <a href="https://devpost.com/software/runningmate#updates" target = "_blank" rel = "noopener noreferrer" style = {{textDecoration: 'none',}}>
+        <a href="https://devpost.com/software/runningmate" target = "_blank" rel = "noopener noreferrer" style = {{textDecoration: 'none',}}>
 
           <div class="outer__button button__left-right">
 
