@@ -23,35 +23,9 @@ const IndexPage = () => {
   <Layout>
     <SEO title="Home" />
     <h1>Hi, I'm Kyle Zhang. </h1>
-    <ul style={{listStyle: 'none', marginBottom: '60px', float: 'right'}}>
-    <div id = "Links" style ={{maxWidth: '300px', marginBottom: '1.45rem'}}>
-      <a href="https://github.com/kylzhng" target = "_blank" rel = "noopener noreferrer" style = {{textDecoration: 'none',}}>
-      <FaGithubSquare class="socialIcons" size="3em"/>
-      </a>
-      <a href="https://www.linkedin.com/in/kyle-zhang-535ba3154/" target = "_blank" rel = "noopener noreferrer" style = {{textDecoration: 'none',}}>
-      <FaLinkedin size="3em" class="socialIcons"/>
-      </a>
-      
-      <CopyToClipboard text={"kz199@rutgers.edu"}
-          onCopy={showCopied}>
-          <GoMail size="3em" class="socialIcons"/> 
-      </CopyToClipboard>
-      <p style={{
-            display: showMsg ? 'block' : 'none',
-            textAlign: "right",
-            fontSize: "14px",
-            fontStyle: "italic",
-            fontWeight: "bold",
-            color: "red",
-            marginTop: "50px"
-          }}>Email Copied.</p>
-      
-    </div>
-    </ul>
-    <h2> Here's a little bit about me,</h2>
-    
     
     <div id = "About">
+    <h2 style={{textDecoration: 'underline', textDecorationColor: 'red'}}> About Me</h2>
     <p style = {{
       fontSize: 12,
       lineHeight: 1.25,
@@ -78,8 +52,37 @@ const IndexPage = () => {
         </AccordionItemPanel>
       </AccordionItem>
     </Accordion>
+
+    <ul style={{listStyle: 'none', float: 'right'}}>
+      <div id = "Links" style ={{maxWidth: '300px', marginBottom: '1.45rem'}}>
+        <a href="https://github.com/kylzhng" target = "_blank" rel = "noopener noreferrer" style = {{textDecoration: 'none',}}>
+        <FaGithubSquare class="socialIcons" size="3em"/>
+        </a>
+        <a href="https://www.linkedin.com/in/kyle-zhang-535ba3154/" target = "_blank" rel = "noopener noreferrer" style = {{textDecoration: 'none',}}>
+        <FaLinkedin size="3em" class="socialIcons"/>
+        </a>
+        
+        <CopyToClipboard text={"kz199@rutgers.edu"}
+            onCopy={showCopied}>
+            <GoMail size="3em" class="socialIcons"/> 
+        </CopyToClipboard>
+        <p style={{
+              display: showMsg ? 'block' : 'none',
+              textAlign: "right",
+              fontSize: "14px",
+              fontStyle: "italic",
+              fontWeight: "bold",
+              color: "red",
+              marginTop: "5px"
+            }}>
+              Email Copied.
+            </p>
+        
+      </div>
+    </ul>
+
     <div id = "Projects" >
-      <h2>Projects</h2>
+      <h2 style={{textDecoration: 'underline', textDecorationColor: 'red', marginBottom: '60px'}}>Projects</h2>
       <div id = "Project 1">
         <a href="https://devpost.com/software/runningmate#updates" target = "_blank" rel = "noopener noreferrer" style = {{textDecoration: 'none',}}>
 
