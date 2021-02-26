@@ -30,7 +30,7 @@ const IndexPage = () => {
       fontSize: 12,
       lineHeight: 1.25,
       fontFamily: 'Verdana'
-    }}>I am a developer and currently a Junior studying Computer Science at Rutgers University, New Brunwick. 
+    }}>I am a developer and currently a Junior studying Computer Science at Rutgers University, New Brunswick. 
       I am also a first generation college student with a deep passion for software engineering. 
       I grew up absurdly shy, which made me truly value being social and making meaningful connections as I matured.
       I dream about contributing to something great and positively impactful. 
